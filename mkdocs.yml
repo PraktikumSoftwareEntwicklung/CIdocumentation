@@ -1,5 +1,4 @@
 site_name: CIdocumentation
-repo_url: https://github.com/PraktikumSoftwareEntwicklung/CIdocumentation
 nav:
 - Github Jenkins Integration: 'GithubJenkins.md'
 - Docker Integration for Builds: 'DockerIntegration.md'
