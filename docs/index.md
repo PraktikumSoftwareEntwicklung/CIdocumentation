@@ -22,7 +22,7 @@ Finish by clicking Register application.
 * Go to 'manage Jenkins' - 'Configure Global Security' and activate the 'Global GitHub OAuth' Settings
  
 * Put in your values and credentials as seen in the screenshot
-![alt text](images/accessControlJenkins.png "Jenkins Access Control Settings")
+![alt text](images\accessControlJenkins.png "Jenkins Access Control Settings")
 
 
 more Details here: [Jenkins wiki](https://wiki.jenkins.io/display/JENKINS/Github+OAuth+Plugin)
