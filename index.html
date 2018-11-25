@@ -44,15 +44,6 @@
 
                 <!-- Expanded navigation -->
                 <div class="navbar-collapse collapse">
-                        <!-- Main navigation -->
-                        <ul class="nav navbar-nav">
-                            <li >
-                                <a href="GithubJenkins/">Github Jenkins Integration</a>
-                            </li>
-                            <li >
-                                <a href="DockerIntegration/">Docker Integration for Builds</a>
-                            </li>
-                        </ul>
 
                     <ul class="nav navbar-nav navbar-right">
                         <li>
@@ -60,6 +51,9 @@
                                 <i class="fa fa-search"></i> Search
                             </a>
                         </li>
+                            <li>
+                                <a href="https://github.com/PraktikumSoftwareEntwicklung/CIdocumentation/edit/master/docs/index.md"><i class="fa fa-github"></i> Edit on GitHub</a>
+                            </li>
                     </ul>
                 </div>
             </div>
@@ -68,12 +62,40 @@
         <div class="container">
                 <div class="col-md-3"><div class="bs-sidebar hidden-print affix well" role="complementary">
     <ul class="nav bs-sidenav">
-        <li class="main active"><a href="#overview-of-the-documenation">Overview of the Documenation</a></li>
+        <li class="main active"><a href="#github-jenkins-integration">Github Jenkins Integration</a></li>
+            <li><a href="#authentication-with-github">Authentication with Github</a></li>
     </ul>
 </div></div>
                 <div class="col-md-9" role="main">
 
-<h1 id="overview-of-the-documenation">Overview of the Documenation</h1></div>
+<h1 id="github-jenkins-integration">Github Jenkins Integration</h1>
+<h2 id="authentication-with-github">Authentication with Github</h2>
+<p>Following steps are required.</p>
+<h3 id="configuration-github">Configuration Github</h3>
+<ul>
+<li>
+<p>Go to the Github Page and visit https://github.com/settings/applications/new to create a GitHub application registration or in 'settings' - 'OAuth Apps' - 'New OAuth App'. The values for application name, homepage URL, or application description don't matter. They can be customized however desired.</p>
+</li>
+<li>
+<p>However, the authorization callback URL takes a specific value. It must be https://jenkins.example.com/securityRealm/finishLogin where               <br />
+jenkins.example.com is the location of the Jenkins server.</p>
+</li>
+<li>
+<p>The important part of the callback URL is /securityRealm/finishLogin
+Finish by clicking Register application.</p>
+</li>
+</ul>
+<h3 id="configuration-jenkins">Configuration Jenkins</h3>
+<ul>
+<li>
+<p>Go to 'manage Jenkins' - 'Configure Global Security' and activate the 'Global GitHub OAuth' Settings</p>
+</li>
+<li>
+<p>Put in your values and credentials as seen in the screenshot
+<img alt="Screenshot" src="img/accessControlJenkins.png" /></p>
+</li>
+</ul>
+<p>more Details here: <a href="https://wiki.jenkins.io/display/JENKINS/Github+OAuth+Plugin">Jenkins wiki</a></p></div>
         </div>
 
         <footer class="col-md-12">
@@ -156,5 +178,5 @@
 
 <!--
 MkDocs version : 1.0.4
-Build Date UTC : 2018-11-12 17:40:20
+Build Date UTC : 2018-11-25 15:13:58
 -->
